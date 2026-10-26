@@ -6,7 +6,7 @@ Aplikasi kasir Command Line Interface (CLI) berbasis Python yang dirancang untuk
 * **Prima Aditama** - Modul Inventaris & Database JSON (`inventory.py`)
 * **Bachtiar Arief N** - Engine HPP Metode FIFO (`cogs.py`)
 * **Andra Putra P** - Modul Kasir & Transaksi (`pos.py`)
-* **Wisam Ikbar D** - Integrasi CLI, Struk & Unit Test (`main.py`, `report.py`, `test_cogs.py`)
+* **Wisam Ikbar D** - Integrasi CLI, Struk & Unit Test (`main.py`, `report.py`)
 
 ---
 
