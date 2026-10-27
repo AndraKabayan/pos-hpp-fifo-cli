@@ -1,6 +1,6 @@
 # KasirFIFO - Sistem Point of Sale (POS) Berbasis Logika FIFO
 
-Aplikasi kasir Command Line Interface (CLI) berbasis Python yang dirancang untuk usaha retail mikro. Sistem ini mencatat setiap barang masuk sebagai *batch* tersendiri dan menghitung Harga Pokok Penjualan (HPP) menggunakan metode *First-In, First-Out* (FIFO) untuk menghasilkan laporan laba kotor yang akurat.
+Aplikasi kasir Command Line Interface (CLI) berbasis Python yang dirancang untuk usaha retail mikro. Sistem ini mencatat setiap barang masuk sebagai *batch* tersendiri dan menghitung Harga Pokok Penjualan (HPP) menggunakan metode *First-In, First-Out* (FIFO) untuk menghasilkan laporan laba kotor.
 
 ## 👥 Tim Pengembang
 * **Prima Aditama** - Modul Inventaris & Database JSON (`inventory.py`)
