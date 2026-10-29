@@ -87,12 +87,21 @@ class Inventory:                                                        # Class 
             print("\n[ Stok Gudang Kosong ]")                           # Tampilkan pesan kosong
             return                                                      # Hentikan fungsi
 
-        print("\n" + "=" * 65)                                          # Cetak garis atas tabel
-        print(f"{'ID':<8} | {'Nama Barang':<25} | {'Harga Jual':<12} | {'Total Stok':<10}") # Cetak judul kolom (rata kiri/kanan)
-        print("-" * 65)                                                 # Garis pemisah header
+        print("\n" + "=" * 80)                                          # Cetak garis atas tabel (dibuat lebih panjang)
+        print(f"{'ID':<8} | {'Nama Barang':<20} | {'Harga Jual':<12} | {'Total Stok':<10}")
+        print("-" * 80)                                                 # Garis pemisah header
+        
         for p in self.products.values():                                # Looping setiap objek produk di dictionary
-            print(f"{p.id:<8} | {p.name:<25} | Rp {p.selling_price:>9,.0f} | {p.total_stock():>10}") # Cetak data produk agar rapi
-        print("=" * 65 + "\n")                                          # Garis penutup tabel
+            # 1. Cetak baris utama (info produk & total stok)
+            print(f"{p.id:<8} | {p.name:<20} | Rp {p.selling_price:>9,.0f} | {p.total_stock():>10}")
+            
+            # 2. TAMBAHAN BARU: Cetak rincian batch (FIFO) di bawahnya
+            if p.batches:
+                for i, b in enumerate(p.batches, 1):                    # Looping setiap batch yang ada di dalam produk
+                    print(f"         └─ Batch {i}: {b.qty:>3} unit @ Modal Rp {b.purchase_price:>9,.0f} (Tgl: {b.arrival_date[:10]})")
+                print("-" * 80)                                         # Garis pemisah antar produk
+                
+        print("=" * 80 + "\n")                                          # Garis penutup tabel
 
     def save_data(self):                                                # Fungsi untuk menyimpan seluruh isi gudang ke file JSON
         data = {pid: prod.to_dict() for pid, prod in self.products.items()} # Ubah semua objek produk menjadi dictionary
