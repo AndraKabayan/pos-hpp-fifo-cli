@@ -1,8 +1,8 @@
 
 import sys                                                                      # Modul bawaan Python yang berfungsi untuk keluar dari program (exit)     
-from modules.inventory import Inventory, proses_restock                         # Impor class gudang dan fungsi restock milik Prima
-from modules.pos import proses_kasir                                            # Impor fungsi kasir milik Andra
-from modules.report import Receipt, Report                                      # Impor class struk dan laporan milik Wisam
+from modules.inventory import Inventory, proses_restock                         # Impor class gudang dan fungsi restock
+from modules.pos import proses_kasir                                            # Impor fungsi kasir
+from modules.report import Receipt, Report                                      # Impor class struk dan laporan 
 
 class KasirApp:                                                                 # Class utama yang merangkai semua modul menjadi satu aplikasi
     def __init__(self):                                                         # Constructor: dijalankan pertama kali aplikasi dibuat
