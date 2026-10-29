@@ -46,7 +46,7 @@ class HPPEngine:                                                    # Kelas untu
         if total_penjualan == 0:                                    # Jika total penjualan nol, margin dianggap nol
             return 0.0                                              # Kembalikan margin nol jika tidak ada penjualan
         laba_kotor = total_penjualan - total_hpp                    # Hitung laba kotor
-        return (laba_kotor / total_hpp) * 100                       # Kembalikan margin dalam persen
+        return (laba_kotor / total_penjualan) * 100                 # Kembalikan margin dalam persen
 
     @staticmethod                                                   # decorator untuk metode statis compute_markup
     def compute_markup(harga_jual, rata_rata_hpp):                  # Menghitung markup dalam persen
